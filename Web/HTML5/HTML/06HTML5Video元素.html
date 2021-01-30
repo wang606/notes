@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"HTML5 Video元素","c":[{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"&lt;video&gt;标签定义视频，比如<strong>电影片段或其他视频流</strong>。目前，&lt;video&gt;元素支持三种是视频格式：MP4、WebM、Ogg。"}]},{"t":"fence","d":2,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>video</span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>320<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">height</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>240<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">controls</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>source</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>https://www.w3cschool.cn/statics/demosource/mov_bbb.mp4<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>video/mp4<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>source</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>https://www.w3cschool.cn/statics/demosource/mov_bbb.ogg<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>video/ogg<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    your browser doesn't support video!\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>video</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>video</span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>512<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">height</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>389<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">controls</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>source</span> <span class=\"token attr-name\">src</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>video/车厢桥.avi<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">type</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>video/avi<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    Vedio in HTML5 doesn't support avi!\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>video</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"&lt;source&gt;标签用来定义多种媒体资源，&lt;control&gt;属性供添加播放、暂停和音量控件。"},{"t":"paragraph","d":3,"p":{},"v":"&lt;video&gt;元素允许使用多个&lt;source&gt;以链接不同的视频文件，浏览器将使用第一个支持的视频文件。"},{"t":"paragraph","d":3,"p":{},"v":"&lt;video&gt;与&lt;/video&gt;之间的文字将在不支持&lt;video&gt;标签的浏览器上显示。"}]},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"src属性规定视频文件的URL。"},{"t":"paragraph","d":3,"p":{},"v":"width、height属性控制视频的尺寸。"},{"t":"paragraph","d":3,"p":{},"v":"autoplay属性让视频在就绪后马上播放。"},{"t":"paragraph","d":3,"p":{},"v":"loop属性让视频结束时重新开始播放。"}]}]})</script>
+</body>
+</html>

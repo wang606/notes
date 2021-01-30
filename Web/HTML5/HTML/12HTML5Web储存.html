@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"HTML5Web存储","c":[{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"在HTML5之前，本地存储使用的是cookie。"},{"t":"paragraph","d":3,"p":{},"v":"Web存储的优势："},{"t":"bullet_list","d":3,"p":{},"v":"","c":[{"t":"list_item","d":4,"p":{},"v":"更加安全"},{"t":"list_item","d":4,"p":{},"v":"更加快速"},{"t":"list_item","d":4,"p":{},"v":"可以存储大量的数据"},{"t":"list_item","d":4,"p":{},"v":"每个服务器请求都不会发送存储的数据"}]},{"t":"paragraph","d":3,"p":{},"v":"数据以 键/值 对存在，Web网页的数据只允许该网页访问使用。"}]},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"Web储存对象有两种类型："},{"t":"bullet_list","d":3,"p":{},"v":"","c":[{"t":"list_item","d":4,"p":{},"v":"localStorage：存储的数据没有时间限制。"},{"t":"list_item","d":4,"p":{},"v":"sessionStorage：针对一个session进行数据存储。当用户关闭浏览器窗口后，数据会被删除。"}]}]},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"Web存储使用的API："},{"t":"bullet_list","d":3,"p":{},"v":"","c":[{"t":"list_item","d":4,"p":{},"v":"保存数据："},{"t":"list_item","d":4,"p":{},"v":"读取数据："},{"t":"list_item","d":4,"p":{},"v":"删除单个数据："},{"t":"list_item","d":4,"p":{},"v":"清除所有数据："},{"t":"list_item","d":4,"p":{},"v":"得到某个索引的key:"}]}]}]})</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"HTML5SVG动画&amp;路径","c":[{"t":"heading","d":2,"p":{},"v":"SVG动画","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"SVG动画可以使用&lt;animate&gt;元素创建。"}]},{"t":"fence","d":3,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>svg</span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>1000<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">height</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>250<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>rect</span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>150<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">height</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>150<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">fill</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>orange<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>animate</span> <span class=\"token attr-name\">attributeName</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>x<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">from</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>0<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">to</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>300<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">dur</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>3s<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">fill</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>freeze<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">repeatCount</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>2<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>rect</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>svg</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"attributeName:指定哪个属性需要产生动画效果。"},{"t":"paragraph","d":4,"p":{},"v":"from:指定属性的起始值。"},{"t":"paragraph","d":4,"p":{},"v":"to:指定属性的结束值。"},{"t":"paragraph","d":4,"p":{},"v":"dur:指定动画运行的时间（持续时间）。"},{"t":"paragraph","d":4,"p":{},"v":"fill=&quot;freeze | remove&quot;:指定动画播放完毕后是停留在播放的终点（freeze）还是回到起始位置（remove）。"},{"t":"paragraph","d":4,"p":{},"v":"repeatCount:指定动画的重复播放次数，indefinite为无数次。"}]}]},{"t":"heading","d":2,"p":{},"v":"SVG路径","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"&lt;path&gt;元素用于定义一个路径。"},{"t":"paragraph","d":4,"p":{},"v":"下面的命令可用于路径数据：【大写标识绝对定位，小写表示相对定位】"},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"M/m = moveto"},{"t":"list_item","d":5,"p":{},"v":"L/l = lineto"},{"t":"list_item","d":5,"p":{},"v":"H/h = horizontal lineto"},{"t":"list_item","d":5,"p":{},"v":"V/v = vertical lineto"},{"t":"list_item","d":5,"p":{},"v":"C/c = curveto"},{"t":"list_item","d":5,"p":{},"v":"S/s = smooth curveto"},{"t":"list_item","d":5,"p":{},"v":"Q/q = quadratic Bézier curve"},{"t":"list_item","d":5,"p":{},"v":"T/t = smooh quadratic Bézier curveto"},{"t":"list_item","d":5,"p":{},"v":"A/a = elliptical Arc"},{"t":"list_item","d":5,"p":{},"v":"Z/z = closepath"}]}]},{"t":"fence","d":3,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>svg</span> <span class=\"token attr-name\">width</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>500<span class=\"token punctuation\">\"</span></span> <span class=\"token attr-name\">height</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>500<span class=\"token punctuation\">\"</span></span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>path</span> <span class=\"token attr-name\">d</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>M150 0 L75 200 L225 200 Z<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>svg</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"}]}]})</script>
+</body>
+</html>

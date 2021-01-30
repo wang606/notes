@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"JavaScript基本概念","c":[{"t":"heading","d":2,"p":{},"v":"语句","c":[{"t":"paragraph","d":4,"p":{},"v":"语句（statement）是为了完成某种任务而进行的操作。"},{"t":"paragraph","d":4,"p":{},"v":"语句以分号结尾。"}]},{"t":"heading","d":2,"p":{},"v":"变量","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"变量是用于存储信息的容器，变量的值可以在整个程序中被修改。"},{"t":"paragraph","d":4,"p":{},"v":"变量使用关键字var来声明， 初始值为undefined。"},{"t":"paragraph","d":4,"p":{},"v":"JavaScript区分大小写。"}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"typeof运算符用来监测一个变量的类型，返回一个字符串。"}]},{"t":"heading","d":3,"p":{},"v":"变量提升","c":[{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"JavaScript引擎先解析代码，获取所有被声明的变量，然后再一行行地运行。也就是说，所有变量的声明语句都会被提升到代码的头部， 这就叫做<strong>变量提升（hoisting）</strong>。"}]},{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"<code>console.log(a); var a = 1;</code>不会报错， 但真正运行的是<code>var a; console.log(a); a = 1;</code>，最后的结果是显示undefined！"}]}]}]},{"t":"heading","d":2,"p":{},"v":"区块","c":[{"t":"paragraph","d":4,"p":{},"v":"JavaScript使用大括号将多个相关语句组合在一起，称为区块（block）。"},{"t":"paragraph","d":4,"p":{},"v":"对于var命令来说，JavaScript的区块不构成单独的作用域（scope）。如<code>{var a = 1; } document.write(a); // 1</code>中var在区块内，但在区块外依然有效。"}]},{"t":"heading","d":2,"p":{},"v":"数据类型","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"JavaScript有五种数据类型："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"字符串（string）"},{"t":"list_item","d":5,"p":{},"v":"数字（number）"},{"t":"list_item","d":5,"p":{},"v":"布尔（boolean）"},{"t":"list_item","d":5,"p":{},"v":"空（null）"},{"t":"list_item","d":5,"p":{},"v":"未定义（undefined）"},{"t":"list_item","d":5,"p":{},"v":"对象（object）"},{"t":"list_item","d":5,"p":{},"v":"symbol"}]}]},{"t":"heading","d":3,"p":{},"v":"null与undefined","c":[{"t":"paragraph","d":5,"p":{},"v":"null是一个表示“空”的对象（typeof null == object），转为数值时为0；"},{"t":"paragraph","d":5,"p":{},"v":"undefined是一个表示“此处无定义”的原始值（typeof undefined == undefined），转为数值时为NaN。"}]},{"t":"heading","d":3,"p":{},"v":"boolean","c":[{"t":"paragraph","d":5,"p":{},"v":"下列运算符会返回布尔值："},{"t":"bullet_list","d":5,"p":{},"v":"","c":[{"t":"list_item","d":6,"p":{},"v":"两元逻辑运算符：&amp;&amp;(And), ||(Or)"},{"t":"list_item","d":6,"p":{},"v":"前置逻辑运算符：!(Not)"},{"t":"list_item","d":6,"p":{},"v":"相等运算符：===, !==, ==, !="},{"t":"list_item","d":6,"p":{},"v":"比较运算符：&gt;, &gt;=, &lt;, &lt;="}]},{"t":"paragraph","d":5,"p":{},"v":"若JavaScript预期某个位置应该是布尔值，则会自动将值转为布尔值。转换规则是除下列六个值被转为false外，其他值都视为true【特别注意空数组（[]）和空对象（{}）对应布尔值为true】："},{"t":"bullet_list","d":5,"p":{},"v":"","c":[{"t":"list_item","d":6,"p":{},"v":"undefined"},{"t":"list_item","d":6,"p":{},"v":"null"},{"t":"list_item","d":6,"p":{},"v":"false"},{"t":"list_item","d":6,"p":{},"v":"0"},{"t":"list_item","d":6,"p":{},"v":"NaN"},{"t":"list_item","d":6,"p":{},"v":"&quot;&quot;或''（空字符串）"}]}]},{"t":"heading","d":3,"p":{},"v":"number","c":[{"t":"paragraph","d":5,"p":{},"v":"JavaScript只有一种数值类型，数值可以带小数点也可不带。"}]},{"t":"heading","d":3,"p":{},"v":"string","c":[{"t":"paragraph","d":5,"p":{},"v":"字符串用双引号&quot;&quot;或单引号''包裹。"},{"t":"paragraph","d":5,"p":{},"v":"用反斜杠\\转义。"}]}]},{"t":"heading","d":2,"p":{},"v":"三元运算符","c":[{"t":"paragraph","d":4,"p":{},"v":"<code>(条件) ? 表达式1 : 表达式2</code>如果“条件”为true则返回“表达式1”的值， 否则返回“表达式2”的值。"}]},{"t":"heading","d":2,"p":{},"v":"比较运算符"},{"t":"heading","d":2,"p":{},"v":"赋值运算符"},{"t":"heading","d":2,"p":{},"v":"字符串","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"字符串是可检索的。"}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"特殊字符"},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"\\n：换行"},{"t":"list_item","d":5,"p":{},"v":"\\r：回车"},{"t":"list_item","d":5,"p":{},"v":"\\t：tab（制表符）"},{"t":"list_item","d":5,"p":{},"v":"\\b：退格符"},{"t":"list_item","d":5,"p":{},"v":"\\f：换页符"}]}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"使用length来计算字符串长度。"}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"字符串运算符："},{"t":"paragraph","d":4,"p":{},"v":"+符号连接字符串"}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"字符串的不变性："},{"t":"paragraph","d":4,"p":{},"v":"JavaScript中字符串一旦被创建就不能被修改。"}]}]}]})</script>
+</body>
+</html>

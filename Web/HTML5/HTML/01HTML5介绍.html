@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"HTML5","c":[{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"HTML5的设计目的是为了在移动设备上支持多媒体。"},{"t":"paragraph","d":3,"p":{},"v":"HTML5还引进了新的功能，可以真正改变用户与文档的交互方式。"}]},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"在编写HTML5文档时，&lt;!DOCTYPE html&gt;声明必须位于HTML5文档中的第一行："}]},{"t":"fence","d":2,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token doctype\"><span class=\"token punctuation\">&lt;!</span><span class=\"token doctype-tag\">DOCTYPE</span> <span class=\"token name\">html</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"字符编码（字符集）声明也被简化："}]},{"t":"fence","d":2,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>mata</span> <span class=\"token attr-name\">charset</span><span class=\"token attr-value\"><span class=\"token punctuation attr-equals\">=</span><span class=\"token punctuation\">\"</span>UTF-8<span class=\"token punctuation\">\"</span></span> <span class=\"token punctuation\">/></span></span>\n</code></pre>\n"},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"HTML5中默认字符集编码是UTF-8。"},{"t":"paragraph","d":3,"p":{},"v":"对于中文网也需要使用&lt;meta charset=&quot;utf-8&quot; /&gt;声明编码。"}]},{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"HTML5的新特性："},{"t":"bullet_list","d":3,"p":{},"v":"","c":[{"t":"list_item","d":4,"p":{},"v":"用于绘画的canvas元素"},{"t":"list_item","d":4,"p":{},"v":"用于媒体回放的video和audio元素"},{"t":"list_item","d":4,"p":{},"v":"对本地离线储存的更好的支持localStorage、sessionStorage"},{"t":"list_item","d":4,"p":{},"v":"新的特殊内容元素，如article、footer、header、nav、section"},{"t":"list_item","d":4,"p":{},"v":"新的表单控件，如calendar、date、time、email、url、search"},{"t":"list_item","d":4,"p":{},"v":""}]}]}]})</script>
+</body>
+</html>

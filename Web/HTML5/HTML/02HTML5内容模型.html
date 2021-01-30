@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"HTML5内容模型","c":[{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"HTML5中标记元素根据内容模型的不同被分为7大类："},{"t":"bullet_list","d":3,"p":{},"v":"","c":[{"t":"list_item","d":4,"p":{},"v":"内联（Embedded）"},{"t":"list_item","d":4,"p":{},"v":"流（Flow）"},{"t":"list_item","d":4,"p":{},"v":"标题（Heading）"},{"t":"list_item","d":4,"p":{},"v":"交互（Interactive）"},{"t":"list_item","d":4,"p":{},"v":"元数据（Metadata）"},{"t":"list_item","d":4,"p":{},"v":"短语（Phrasing）"},{"t":"list_item","d":4,"p":{},"v":"区段（Sectioning）"}]}]},{"t":"heading","d":2,"p":{},"v":"元数据（Metadata）","c":[{"t":"paragraph","d":4,"p":{},"v":"通常出现在页面的head中，设置页面其他部分的表现和行为。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;base&gt;，&lt;link&gt;，&lt;mata&gt;，&lt;noscript&gt;，&lt;script&gt;，&lt;style&gt;，&lt;title&gt;。"}]},{"t":"heading","d":2,"p":{},"v":"内联（Embedded）","c":[{"t":"paragraph","d":4,"p":{},"v":"在文档中添加其他类型的内容。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;audio&gt;，&lt;video&gt;，&lt;canvas&gt;，&lt;iframe&gt;，&lt;img&gt;，&lt;math&gt;，&lt;object&gt;，&lt;svg&gt;。"}]},{"t":"heading","d":2,"p":{},"v":"交互（Interactive）","c":[{"t":"paragraph","d":4,"p":{},"v":"与用户交互的内容。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;a&gt;，&lt;audio&gt;，&lt;video&gt;，&lt;button&gt;，&lt;details&gt;，&lt;embed&gt;，&lt;iframe&gt;，&lt;img&gt;，&lt;input&gt;，&lt;label&gt;，&lt;object&gt;，&lt;select&gt;，&lt;textarea&gt;。"}]},{"t":"heading","d":2,"p":{},"v":"标题（Heading）","c":[{"t":"paragraph","d":4,"p":{},"v":"定义段落标题。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;h1-6&gt;，&lt;hgroup&gt;。"}]},{"t":"heading","d":2,"p":{},"v":"短语（Phrasing）","c":[{"t":"paragraph","d":4,"p":{},"v":"文本和文本标记元素。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;img&gt;，&lt;span&gt;，&lt;b&gt;，&lt;label&gt;，&lt;br/&gt;，&lt;small&gt;，&lt;sub&gt;等等。"}]},{"t":"heading","d":2,"p":{},"v":"流（Flow）","c":[{"t":"paragraph","d":4,"p":{},"v":"包含在文档正常流中的大多数HTML5元素。"}]},{"t":"heading","d":2,"p":{},"v":"区段（Sectioning）","c":[{"t":"paragraph","d":4,"p":{},"v":"定义标题，内容，导航和页脚的范围。"},{"t":"paragraph","d":4,"p":{},"v":"元素：&lt;article&gt;，&lt;aside&gt;，&lt;nav&gt;，&lt;section&gt;。"}]}]})</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"JavaScript条件和循环","c":[{"t":"heading","d":2,"p":{},"v":"if-else if-else语句","c":[{"t":"fence","d":3,"v":"<pre class=\"language-javascript\"><code class=\"language-javascript\"><span class=\"token keyword control-flow\">if</span> <span class=\"token punctuation\">(</span>条件<span class=\"token number\">01</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token comment\">// 条件01为true时会执行的代码 </span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token keyword control-flow\">else</span> <span class=\"token keyword control-flow\">if</span> <span class=\"token punctuation\">(</span>条件<span class=\"token number\">02</span><span class=\"token punctuation\">)</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token comment\">// 条件01位false且条件02位true时会执行的代码</span>\n<span class=\"token punctuation\">}</span>\n<span class=\"token keyword control-flow\">else</span> <span class=\"token punctuation\">{</span>\n    <span class=\"token comment\">// 条件01和条件02都为flase时会执行的代码</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"switch语句","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">switch(表达式) {\n    case 结果1:\n        // 表达式==结果1时会执行的代码\n        break; \n    case 结果2:\n        // 表达式==结果2时会执行的代码\n        break; \n    ...\n    case 结果n:\n        // 表达式==结果n时会执行的代码\n        break; \n    default:\n        // 表达式与上述所有结果不等时会执行的代码\n}\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"for循环","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">/*\nStatement01：在循环开始前执行； \nStatement02：定义运行循环的条件； \nStatement03：在执行循环后都会执行； \n*/\nfor (Statement01; Statement02; Statement03) {\n    // 循环执行的代码\n}\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"while循环","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">while (条件) {\n    // 只要“条件”为true就会执行的代码\n}\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"do while循环","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">do {\n    // 有可能被循环执行的代码（当“条件”为true时）\n}\nwhile (条件); \n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"break与continue语句","c":[{"t":"paragraph","d":4,"p":{},"v":"break语句用于跳出当前循环；"},{"t":"paragraph","d":4,"p":{},"v":"continue语句跳出循环后会继续执行循环之后的代码；"}]},{"t":"heading","d":2,"p":{},"v":"JS标签","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"JavaScript允许语句前面设置标签（label）相当于定位符，用于跳转到程序的任意位置。"},{"t":"paragraph","d":4,"p":{},"v":"<code>label: 语句</code>标签可以是任意非保留字的标识符，语句部分可以是任意语句。"}]},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"标签通常与break语句和continue语句配合使用，跳出特定的循环。"}]},{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">// 跳出双层循环\nlabel01: for (var i = 0; i &lt; 3; i++) {\n    for (var j = 0; j &lt; 3; j++) {\n        if (i === 1 &amp;&amp; j === 1) break label01; \n        console.log(&quot;i=&quot; + i + &quot;, j=&quot; + j + &quot;; &quot;); \n    }\n}// i=0, j=0; i=0, j=1; i=0, j=2; i=1, j=0; \n</code></pre>\n"},{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">// 跳出区块\nlabel02: {\n    console.log(&quot;本行正常输出&quot;); \n    break label02; \n    console.log(&quot;本行不会输出&quot;); \n}\nconsole.log(&quot;本行也正常输出&quot;); \n</code></pre>\n"}]}]})</script>
+</body>
+</html>

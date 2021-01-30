@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"JavaScript简介","c":[{"t":"heading","d":2,"p":{},"v":"JavaScript基本特点","c":[{"t":"list_item","d":5,"p":{},"v":"<strong>轻量级</strong>编程语言"},{"t":"list_item","d":5,"p":{},"v":"<strong>解释性</strong>脚本语言"},{"t":"list_item","d":5,"p":{},"v":"可插入HTML页面"},{"t":"list_item","d":5,"p":{},"v":"可由所有现代浏览器执行"}]},{"t":"heading","d":2,"p":{},"v":"JavaScript组成部分","c":[{"t":"list_item","d":5,"p":{},"v":"ECMAScript：描述该语言的语法和基本对象"},{"t":"list_item","d":5,"p":{},"v":"DOM（文档对象模型）：描述处理网页内容的方法和接口"},{"t":"list_item","d":5,"p":{},"v":"BOM（浏览器对象模型）：描述与浏览器进行交互的方法和接口"}]},{"t":"heading","d":2,"p":{},"v":"JavaScript用法","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"<code>&lt;script&gt;&lt;/script&gt;</code>"},{"t":"paragraph","d":4,"p":{},"v":"JavaScript可被放置在HTML页面的&lt;body&gt;和&lt;head&gt;部分中。"}]},{"t":"fence","d":3,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>html</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>body</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>script</span><span class=\"token punctuation\">></span></span><span class=\"token script\"><span class=\"token language-javascript\">\n            <span class=\"token function\">alter</span><span class=\"token punctuation\">(</span><span class=\"token string\">\"My First JavaScript!\"</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> \n        </span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>script</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>body</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>html</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"},{"t":"heading","d":3,"p":{},"v":"JavaScript输出","c":[{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"list_item","d":6,"p":{},"v":"<code>document.write()</code>将内容写到HTML文档中"},{"t":"list_item","d":6,"p":{},"v":"<code>window.alter()</code>弹出警告框"},{"t":"list_item","d":6,"p":{},"v":"<code>innerHTML</code>写入到HTML元素"},{"t":"list_item","d":6,"p":{},"v":"<code>console.log()</code>写入到浏览器的控制台"}]},{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"格式化文本（Formatting Text）"}]},{"t":"fence","d":4,"v":"<pre class=\"language-html\"><code class=\"language-html\"><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>html</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>head</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>body</span><span class=\"token punctuation\">></span></span>\n        <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;</span>script</span><span class=\"token punctuation\">></span></span><span class=\"token script\"><span class=\"token language-javascript\">\n            <span class=\"token dom variable\">document</span><span class=\"token punctuation\">.</span><span class=\"token method function property-access\">write</span><span class=\"token punctuation\">(</span><span class=\"token string\">\"&lt;h1>Hello World!&lt;/h1>\"</span><span class=\"token punctuation\">)</span>\n        </span></span><span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>script</span><span class=\"token punctuation\">></span></span>\n    <span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>body</span><span class=\"token punctuation\">></span></span>\n<span class=\"token tag\"><span class=\"token tag\"><span class=\"token punctuation\">&lt;/</span>html</span><span class=\"token punctuation\">></span></span>\n</code></pre>\n"}]},{"t":"heading","d":3,"p":{},"v":"外部JavaScript","c":[{"t":"paragraph","d":5,"p":{},"v":"<code>&lt;script src=&quot;example.js&quot;&gt;&lt;/script&gt;</code>"}]},{"t":"heading","d":3,"p":{},"v":"JavaScript注释","c":[{"t":"paragraph","d":5,"p":{},"v":"单行注释：<code>// JavaScript注释</code>"},{"t":"paragraph","d":5,"p":{},"v":"多行注释：<code>/* JavaScript注释 */</code>"}]}]}]})</script>
+</body>
+</html>
