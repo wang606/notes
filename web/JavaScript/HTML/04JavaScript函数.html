@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"JavaScript函数","c":[{"t":"heading","d":2,"p":{},"v":"函数定义","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">function functionName(parameters) {\n    // 函数中的代码\n}\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"函数参数","c":[{"t":"paragraph","d":4,"p":{},"v":"函数显式参数在函数定义时列出，函数隐式参数arguments是函数调用时传递给函数真正的值。如"},{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">function sum() {\n return arguments[0] + arguments[1]; \n}\nsum(1, 2); //3\n</code></pre>\n"},{"t":"paragraph","d":4,"p":{},"v":"参数规则："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"JavaScript函数定义时参数没有指定数据类型；"},{"t":"list_item","d":5,"p":{},"v":"JavaScript函数对隐藏参数（arguments）没有进行检测；"},{"t":"list_item","d":5,"p":{},"v":"JavaScript函数对隐藏参数（arguments）的个数没有进行检测。"}]},{"t":"paragraph","d":4,"p":{},"v":"多参数用逗号“, ”分隔，调用函数时如果缺少参数，则缺少值为undefined。"}]},{"t":"heading","d":2,"p":{},"v":"变量作用域","c":[{"t":"paragraph","d":4,"p":{},"v":"<strong>作用域</strong>是可访问变量的集合。【在JavaScript中，<strong>对象</strong>和<strong>函数</strong>同样是变量】"},{"t":"paragraph","d":4,"p":{},"v":"JavaScript局部作用域："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"变量在函数内声明，变量为局部作用域，局部变量只能在函数内部访问。"},{"t":"list_item","d":5,"p":{},"v":"局部变量在函数开始执行时创建，函数执行完后局部变量会自动销毁。"},{"t":"list_item","d":5,"p":{},"v":"局部变量的优先级高于同名的全局变量。"}]},{"t":"paragraph","d":4,"p":{},"v":"JavaScript全局变量："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"变量在函数外定义即全局变量，全局变量网页中所有脚本和函数均可使用。"},{"t":"list_item","d":5,"p":{},"v":"<span style=\"color: #800000\">如果变量在函数内没有声明（没有使用var关键字），则该变量为全局变量。</span>如："},{"t":"list_item","d":5,"p":{},"v":"全局变量在页面关闭后销毁。"}]},{"t":"paragraph","d":4,"p":{},"v":"HTML中的全局变量："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"在HTML中，全局变量是<strong>window</strong>对象：<strong>所有数据变量都属于window对象</strong>。"}]}]},{"t":"heading","d":2,"p":{},"v":"弹出框","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"JavaScript提供三种类型的弹出框："},{"t":"bullet_list","d":4,"p":{},"v":"","c":[{"t":"list_item","d":5,"p":{},"v":"Alert"},{"t":"list_item","d":5,"p":{},"v":"Prompt"},{"t":"list_item","d":5,"p":{},"v":"Confirm"}]}]},{"t":"heading","d":3,"p":{},"v":"Alert警告框","c":[{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"当弹出警告框时，用户必须单击“确定”以继续。"},{"t":"paragraph","d":5,"p":{},"v":"警报功能采用单个参数，即弹出框中显示的文本。"},{"t":"paragraph","d":5,"p":{},"v":"使用alert弹出框，将阻塞整个页面的运行，点击确定后才继续运行。"}]},{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">alert(&quot;Hello World!&quot;); \n</code></pre>\n"}]},{"t":"heading","d":3,"p":{},"v":"Prompt框","c":[{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"通常使用Prompt框来让用户输入一个值。"},{"t":"paragraph","d":5,"p":{},"v":"当弹出提示框（Prompt框）时，输入输入值后，用户将不得不单击“确定”或“取消”以继续。"},{"t":"paragraph","d":5,"p":{},"v":"如果用户单击确定，该框将返回输入值；如果用户单击取消，该框将返回null。"},{"t":"paragraph","d":5,"p":{},"v":"Prompt()方法有两个参数："},{"t":"bullet_list","d":5,"p":{},"v":"","c":[{"t":"list_item","d":6,"p":{},"v":"第一个是要在文本框中显示的标签"},{"t":"list_item","d":6,"p":{},"v":"第二个是在文本框中显示的默认字符串【可选】"}]}]},{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var input = prompt(&quot;so embarrassed, em...ok, input something: &quot;, &quot;Hurry up!&quot;); \nalert(input); \n</code></pre>\n"}]},{"t":"heading","d":3,"p":{},"v":"Confirm框","c":[{"t":"blockquote","d":4,"p":{},"v":"","c":[{"t":"paragraph","d":5,"p":{},"v":"通常使用Confirm框让用户验证或接受某些内容。"},{"t":"paragraph","d":5,"p":{},"v":"当弹出确认框（Confirm框）时，用户必须单击“确定”或“取消”以继续。"},{"t":"paragraph","d":5,"p":{},"v":"如果用户单击确定，该框将返回true；如果用户单击取消，该框将返回false。"}]},{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var result = confirm(&quot;Are you sure to leave?&quot;); \nif (result === true) {\n    alert(&quot;get away!&quot;); \n}\nelse {\n    alert(&quot;I have bet it!&quot;); \n}\n</code></pre>\n"}]}]}]})</script>
+</body>
+</html>

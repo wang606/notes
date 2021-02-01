@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.3.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.1.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(function anonymous(
+) {
+const toolbar = new markmap.Toolbar();
+toolbar.attach(mm);
+const el = toolbar.render();
+el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+document.body.append(el);
+})</script><script>((getMarkmap, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', null, data);
+      })(() => window.markmap,{"t":"heading","d":1,"p":{},"v":"JavaScript对象","c":[{"t":"blockquote","d":2,"p":{},"v":"","c":[{"t":"paragraph","d":3,"p":{},"v":"JavaScript对象是拥有属性和方法的数据。"},{"t":"paragraph","d":3,"p":{},"v":"JavaScript中的一切皆对象：字符串、数值、数组、函数....此外，JavaScript也允许自定义对象。"}]},{"t":"heading","d":2,"p":{},"v":"对象定义","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var myObject = {\n    name01: value01, name02: value02, ...\n}\n</code></pre>\n"},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"其中，myObject即对象，name为对象的属性，value为对象属性对应的值。如："}]},{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var person = {\n    name: &quot;John&quot;, age: 31, favColor: &quot;green&quot;, height: 183, \n}; \n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"对象属性","c":[{"t":"paragraph","d":4,"p":{},"v":"可以通过<code>objectName.propertyName</code>或<code>objectName[&quot;propertyName&quot;]</code>访问对象属性。"}]},{"t":"heading","d":2,"p":{},"v":"对象构造器","c":[{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">function person(firstname, lastname, age, eyecolor) {\n    this.firstname = firstname; \n    this.lastname = lastname; \n    this.age = age; \n    this.eyecolor = eyecolor; \n}\n</code></pre>\n"},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"this通常指向我们正在执行的函数本身，或该函数所属的对象。"}]},{"t":"heading","d":3,"p":{},"v":"创建JavaScript对象实例","c":[{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var myFather = new person(&quot;John&quot;, &quot;Doe&quot;, 50, &quot;blue&quot;); \nvar myMother = new person(&quot;Sally&quot;, &quot;Rally&quot;, 48, &quot;green&quot;); \n</code></pre>\n"}]}]},{"t":"heading","d":2,"p":{},"v":"对象初始化","c":[{"t":"paragraph","d":4,"p":{},"v":"使用英文大括号{}创建<strong>单个</strong>对象："},{"t":"fence","d":4,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">var John = {name: &quot;John&quot;, age: 25}; \nvar Loen = {name: &quot;Loen&quot;, age: 28};  \n</code></pre>\n"}]},{"t":"heading","d":2,"p":{},"v":"添加方法","c":[{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"方法是存储在对象属性中的函数。"},{"t":"paragraph","d":4,"p":{},"v":"创建对象函数：<code>methodName: function(paraments) { code lines }</code>;"},{"t":"paragraph","d":4,"p":{},"v":"使用<code>objectName.methodName()</code>访问对象函数。"}]},{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">function person(name, age) {\n    this.name = name; \n    this.age = age; \n    this.changeName = function (name) {\n        this.name = name; \n    }\n}\n\nvar p = new person(&quot;Loen&quot;, 28); \np.changeName(&quot;John&quot;); \n</code></pre>\n"},{"t":"blockquote","d":3,"p":{},"v":"","c":[{"t":"paragraph","d":4,"p":{},"v":"我们也可以在构造函数外定义一个函数，通过函数名关联到对象的属性上：【注意将函数关联到对象属性时不需要写括号】"}]},{"t":"fence","d":3,"v":"<pre class=\"language-JavaScript\"><code class=\"language-JavaScript\">function person(name, age) {\n    this.name = name; \n    this.age = age; \n    this.yearOfBirth = bornYear; // 关联到bornYear函数\n}\nfunction bornYear() {\n    return new Date().getFullYear() - this.age; \n}\n</code></pre>\n"}]}]})</script>
+</body>
+</html>
